@@ -14,6 +14,7 @@ function FigureHandle = Tsvarana_plot(Varana, Opts)
 % Changelog
 %
 % 15/02/2020    Written
+% 28/02/2020    Figure hidden
 %
 % Ivan Alvarez
 % University of California, Berkeley
@@ -24,7 +25,8 @@ function FigureHandle = Tsvarana_plot(Varana, Opts)
 % Start new figure
 FigureHandle = figure;
 
-% Rebrand
+% Rebrand and hide
+FigureHandle.Visible = 'off';
 FigureHandle.Name = 'Tsvarana';
 
 %% Plot #1
