@@ -22,12 +22,8 @@ function FigureHandle = Tsvarana_plot(Varana, Opts)
 
 %% Figure handling
 
-% Start new figure
-FigureHandle = figure;
-
-% Rebrand and hide
-FigureHandle.Visible = 'off';
-FigureHandle.Name = 'Tsvarana';
+% Start new hidden figure
+FigureHandle = figure('Visible', false);
 
 %% Plot #1
 % Mean volume-to-volume variance
