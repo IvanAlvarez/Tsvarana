@@ -14,21 +14,22 @@ function Tsvarana(Nifti, Opts)
 %    .SaveScrub     [logica] Save scrubbed timeseries as NIFTI file
 %    .SavePlot      [logica] Save plot figure
 %
-% Iterative timeseries variance analysis. Estimates the volume-to-volume
-% variance in a 4D NIFTI dataset, and output relevant metrics and plots.
-% If requested, volumes with variance above the set threshold are nulled by
-% replacement with the average of the previous and following compliant 
-% volumes. This procedure is carried out iteratively, until the variance
-% threshold is satisfied. Outputs variance parameters (.mat, .csv), 
-% variance plots (.png), and the scrubbed timeseries (.nii.gz).
+% MRI timeseries variance analysis in MATLAB.
+% Estimates the volume-to-volume variance in a 4D NIFTI dataset, and outputs 
+% relevant metrics and plots. If requested, volumes with variance above a 
+% user-specified threshold are nulled by replacement with the average of the 
+% previous and following threshold-compliant volumes. This procedure is carried 
+% out iteratively, until the variance threshold is satisfied. Optional outputs
+% are volume-to-volume variance parameters (.mat, .csv), variance plots (.png), 
+% and the scrubbed timeseries (.nii.gz).
 % 
+% Based on Matthew Brett's tsdiffana:
+% http://imaging.mrc-cbu.cam.ac.uk/imaging/DataDiagnostics
+%
 % Requirements
 %  * MATLAB R2017b (v9.3.0) or later
 %  * MATLAB Image Processing Toolbox
 %  * MATLAB Signal Processing Toolbox
-%
-% Based on Matthew Brett's tsdiffana:
-% http://imaging.mrc-cbu.cam.ac.uk/imaging/DataDiagnostics
 %
 % Changelog
 %
