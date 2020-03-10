@@ -47,13 +47,13 @@ Input flags
 --save_varimg [iftrue] Save variance image as NIFTI files (default = false)
 ```
 
-The following output files are created;
+The following output files are available
 
 ```bash
 <output>_scrub.nii.gz
 ```
 
-If the `--scrub` flag is turned on, a single file is created, containing the volume- or slice-scrubbed timeseries, depending on requested method.
+If the `--scrub` flag is turned on, a NIFTI file is created, containing the volume- or slice-scrubbed timeseries, depending on requested method.
 
 ```bash
 <output>_volumevar?.csv
