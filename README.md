@@ -39,12 +39,12 @@ Input flags
 ```bash
 --data				[string] A 4-dimensional NIFTI file, typically a BOLD timeseries
 --output			[string] Basename for output files
---slicedir 		[string] Slice-encode direction; x,y,z (default = z)
---threshold 	[scalar] Variance threshold for binary regressor generation (default = 5) 
---scrub 			[string] 'volume' (default), 'slice', 'off'
---save_var 		[iftrue] Save variance analysis as CSV files (default = false)
+--slicedir		[string] Slice-encode direction; x,y,z (default = z)
+--threshold		[scalar] Variance threshold for binary regressor generation (default = 5) 
+--scrub				[string] 'volume' (default), 'slice', 'off'
+--save_var		[iftrue] Save variance analysis as CSV files (default = false)
 --save_reg		[iftrue] Save binary regressors as CSV files (default = false)
---save_varimg [iftrue] Save variance image as NIFTI files (default = false)
+--save_varimg	[iftrue] Save variance image as NIFTI files (default = false)
 ```
 
 The following output files are available
