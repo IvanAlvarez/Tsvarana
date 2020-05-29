@@ -10,21 +10,22 @@ Based on Matthew Brett's data diagnostics tool [Tsdiffana](http://imaging.mrc-cb
 
 Tsvarana differs in two signifcant respects; (1) Tsvarana performs iterative testing and removal of variance threshold violations, and (2) Tsvarana calculates variance between individual volumes and the median volume of the timeseries. This is in contrast to the approach in Tsdiffana, where variance is calculated volume-to-volume in a sliding window approach. The former approach is preferred, as it is more robust to  cases of sustained abnormal voxel intensities spanning consecutive volumes.
 
-**Contributors**
+**Written by**
 
-Ivan Alvarez
+Ivan Alvarez  
+
 University of California, Berkeley
 
 ### Requirements
 
-* Python3
-* numpy
-* pandas
-* scipy
-* nibabel
-* bokeh
+* [Python3](https://www.python.org/)
+* [numpy](https://numpy.org/)
+* [pandas](https://pandas.pydata.org/)
+* [scipy](https://www.scipy.org/)
+* [nibabel](https://nipy.org/nibabel/)
+* [bokeh](https://bokeh.org/)
 
-All of the above are installed as default in [Anaconda](https://www.anaconda.com/).
+You can obtain the packages above via [Anaconda](https://www.anaconda.com/), or install them individually with [pip](https://pip.pypa.io/).
 
 ### Usage
 
