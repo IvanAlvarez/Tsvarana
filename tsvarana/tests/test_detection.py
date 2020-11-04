@@ -56,7 +56,7 @@ class TestDetection(TestCase):
 
     # Catch
     with pytest.raises(ValueError):
-        varana.detect(data)
+        varana.detect([])
 
 # Done
 #

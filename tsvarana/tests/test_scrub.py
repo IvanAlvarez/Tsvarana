@@ -56,7 +56,7 @@ class TestScrub(TestCase):
 
     # Catch
     with pytest.raises(ValueError):
-        varana.data_scrub(data)
+        varana.data_scrub([])
 
 # Done
 #
