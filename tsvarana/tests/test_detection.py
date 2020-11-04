@@ -54,9 +54,5 @@ class TestDetection(TestCase):
         varana.detect(data)
         assert varana.variance[0].shape == data.shape
 
-    # Catch
-    with pytest.raises(ValueError):
-        varana.detect([])
-
 # Done
 #
