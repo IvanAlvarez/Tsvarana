@@ -1,6 +1,6 @@
 # Tsvarana
 
-[![PyPI version](https://badge.fury.io/py/tsvarana.svg)](https://badge.fury.io/py/tsvarana)[![Build Status](https://travis-ci.com/IvanAlvarez/Tsvarana.svg?branch=master)](https://travis-ci.com/IvanAlvarez/Tsvarana)![GitHub](https://img.shields.io/github/license/IvanAlvarez/Tsvarana)![GitHub top language](https://img.shields.io/github/languages/top/IvanAlvarez/Tsvarana)
+[![PyPI version](https://badge.fury.io/py/tsvarana.svg)](https://badge.fury.io/py/tsvarana) | [![Build Status](https://travis-ci.com/IvanAlvarez/Tsvarana.svg?branch=master)](https://travis-ci.com/IvanAlvarez/Tsvarana) | ![GitHub](https://img.shields.io/github/license/IvanAlvarez/Tsvarana) | ![GitHub top language](https://img.shields.io/github/languages/top/IvanAlvarez/Tsvarana)
 
 ## About
 
