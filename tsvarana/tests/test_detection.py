@@ -11,8 +11,6 @@
 
 # Libraries
 import numpy as np
-import pytest
-from unittest import TestCase
 
 # Project dependencies
 import tsvarana
@@ -30,29 +28,61 @@ varana.var_threshold = 0.1
 # Generate dummy data with (x,y,z,t) dimensions
 data = np.random.rand(10, 10, 10, 100)
 
+# Test voxel-wise detection
+def test_detection_voxel():
 
-class TestDetection(TestCase):
-    '''
-    Test detection functions for unit errors
-    '''
+    # Run detection
+    varana.spatial_unit = 'voxel'
+    varana.detect(data)
 
-    # Test voxel-wise detection
-    def test_detection_voxel():
-        varana.spatial_unit = 'voxel'
-        varana.detect(data)
-        assert varana.variance[0].shape == data.shape
+    # Outputs are lists
+    assert type(varana.variance) == list
+    assert type(varana.regressor) == list
 
-    # Test slice-wise detection
-    def test_detection_slice():
-        varana.spatial_unit = 'slice'
-        varana.detect(data)
-        assert varana.variance[0].shape == data.shape
+    # Outputs have the same size as input data
+    assert varana.variance[0].shape == data.shape
+    assert varana.regressor[0].shape == data.shape
 
-    # Test volume-wise detection
-    def test_detection_volume():
-        varana.spatial_unit = 'volume'
-        varana.detect(data)
-        assert varana.variance[0].shape == data.shape
+    # Variance output is non-zero
+    assert varana.variance[0].sum() != 0
+
+
+# Test slice-wise detection
+def test_detection_slice():
+
+    # Run detection
+    varana.spatial_unit = 'slice'
+    varana.detect(data)
+
+    # Outputs are lists
+    assert type(varana.variance) == list
+    assert type(varana.regressor) == list
+
+    # Outputs have the same size as input data
+    assert varana.variance[0].shape == data.shape
+    assert varana.regressor[0].shape == data.shape
+
+    # Variance output is non-zero
+    assert varana.variance[0].sum() != 0
+
+
+# Test volume-wise detection
+def test_detection_volume():
+
+    # Run detection
+    varana.spatial_unit = 'volume'
+    varana.detect(data)
+
+    # Outputs are lists
+    assert type(varana.variance) == list
+    assert type(varana.regressor) == list
+
+    # Outputs have the same size as input data
+    assert varana.variance[0].shape == data.shape
+    assert varana.regressor[0].shape == data.shape
+
+    # Variance output is non-zero
+    assert varana.variance[0].sum() != 0
 
 # Done
 #
