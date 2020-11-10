@@ -136,7 +136,7 @@ def scrub(data, regressor, time_axis):
     v_regr = np.reshape(q_regr, [n_timepoints, -1])
 
     # Make a copy of the data
-    data_scrub = v_data
+    data_scrub = v_data.copy()
 
     # Zero-pad either side the regressor along the time dimension
     v_regr = np.pad(
